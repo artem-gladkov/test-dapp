@@ -1,0 +1,7 @@
+.socialLinks {
+  display: grid;
+  grid-template-columns: repeat(4, 25px);
+  grid-template-rows: 1fr;
+  grid-gap: 32px;
+  height: max-content;
+}

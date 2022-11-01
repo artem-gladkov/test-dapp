@@ -1,0 +1,73 @@
+@import "src/app/styles";
+
+.widget {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  background-image: url("./union.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-gap: $large-indent;
+}
+
+.toggle {
+  max-width: 310px;
+}
+
+.form {
+  display: grid;
+  grid-template: repeat(3, max-content) / 1fr;
+  grid-gap: 40px;
+}
+
+.body {
+  display: grid;
+  grid-template: repeat(3, max-content) / 1fr;
+  grid-gap: 30px;
+}
+
+.doubleFields {
+  display: grid;
+  grid-template-columns: minmax(0, 500px) minmax(0, 310px);
+  grid-gap: 20px;
+  max-width: 830px;
+  width: 100%;
+}
+
+.expectedPrice {
+  max-width: 280px;
+}
+
+@media screen and (max-width: $lg-width){
+  .widget {
+    gap: 30px;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .toggle {
+    max-width: 100%;
+  }
+
+  .doubleFields {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+
+  .form {
+    grid-gap: 30px;
+  }
+
+  .widget {
+    background-image: none;
+  }
+}

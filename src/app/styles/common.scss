@@ -1,4 +1,5 @@
 @import "variables";
+@import "extends";
 
 * {
   box-sizing: border-box;
@@ -7,6 +8,7 @@
 html,
 body,
 #root,
+.app
  {
   width: 100%;
   height: 100%;
@@ -14,8 +16,14 @@ body,
   padding: 0;
 }
 
-body,{
-  font-family: sans-serif;
+body{
+  font-family: $primary-font-stack;
 }
+
+h1 {
+  @extend %h1
+}
+
+
 
 

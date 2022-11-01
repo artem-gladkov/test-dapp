@@ -1,0 +1,24 @@
+@import "src/app/styles";
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 970px) minmax(0, 310px);
+  grid-gap: 20px;
+  height: 100%;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+.container {
+  height: 100%;
+}
+
+@media screen and (max-width: $md-width){
+  .body {
+    grid-template-columns: 1fr
+  }
+}

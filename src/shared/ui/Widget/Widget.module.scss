@@ -1,0 +1,9 @@
+@import "src/app/styles/variables";
+
+.widget {
+  background-color: $white-color;
+  border-radius: $big-border-radius;
+  width: 100%;
+  height: 100%;
+  padding: 34px 30px;
+}

@@ -1,0 +1,27 @@
+@import "src/app/styles/variables";
+
+.privacyLinks {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $big-indent;
+  width: max-content;
+}
+
+.link {
+  font-family: $secondary-font-stack;
+  font-weight: 500;
+  color: $secondary-text-color;
+  transition: color ease .3s;
+
+  &:hover {
+    color: $light-primary-color;
+  }
+
+  &:active {
+    color: $contrast-primary-color;
+  }
+
+  &:disabled {
+    color: $disabled-text-color;
+  }
+}

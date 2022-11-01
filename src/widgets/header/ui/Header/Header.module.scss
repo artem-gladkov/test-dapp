@@ -1,0 +1,22 @@
+@import "src/app/styles/variables";
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+  height: 100px;
+  background-color: rgba($white-color, 0.1);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-gap: $big-indent;
+  align-items: center;
+}
+
+.logo {
+  justify-self: center;
+}

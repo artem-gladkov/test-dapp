@@ -1,0 +1,46 @@
+@import "src/app/styles/variables";
+
+.button {
+  font-family: $primary-font-stack;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  border-radius: $default-border-radius;
+  background-color: unset;
+  cursor: pointer;
+  width: 200px;
+  height: 48px;
+  box-shadow: 0 8px 16px rgba($primary-color, 0.2);
+  border: 1px solid transparent;
+  transition: background-color ease .3s, color ease .3s, border ease .3s;
+  text-align: center;
+
+  &.primary {
+    color: $white-color;
+    background-color: $primary-color;
+    transition: background-color ease .3s, color ease .3s, border ease .3s;
+
+    &:hover {
+      background-color: $light-primary-color;
+    }
+
+    &:active {
+      background-color: $contrast-primary-color;
+    }
+
+    &:focus {
+      border: 1px solid $accent-color;
+    }
+
+    &:disabled {
+      color: $disabled-text-color;
+      background-color: $disabled-bg-color;
+      box-shadow: none;
+      cursor: default;
+    }
+  }
+
+  &.full {
+    width: 100%;
+  }
+}

@@ -1,10 +1,52 @@
 // Colors
 
-$primary-color:  #08D899;
+$contrast-primary-color: #00B780;
+$primary-color: #08D899;
+$light-primary-color: #B2F1DE;
+
+$accent-color: #7B61FF;
+
+$success-color: #3AC922;
+
 $white-color: #FFF;
 $black-color: #000;
 
 $dark-gray-color: #092326;
 
-$text-color: $dark-gray-color;
-$text-secondary-color: #676767;
+$primary-text-color: $dark-gray-color;
+$secondary-text-color: #676767;
+$light-text-color: #959596;
+$disabled-text-color: #949697;
+
+$disabled-bg-color: #E7EBF1;
+
+$border-color: #CDD2DD;
+
+$default-icon-color: #ABB6B7;
+
+$light-bg-color: #F0F5F5;
+
+//Grid
+
+$xxl-width: 1536px;
+$xl-width: 1360px;
+$lg-width: 1024px;
+$md-width: 768px;
+$sm-width: 640px;
+
+
+// Indents
+$default-indent: 8px;
+$small-indent: $default-indent / 2;
+$big-indent: $default-indent * 2;
+$large-indent: $default-indent * 3;
+
+//Fonts
+$primary-font-stack: 'Manrope', sans-serif;
+$secondary-font-stack: 'Gilroy', sans-serif;
+$thirdly-font-stack: 'Inter', sans-serif;
+
+// Other
+
+$default-border-radius: 8px;
+$big-border-radius: $default-border-radius * 2;

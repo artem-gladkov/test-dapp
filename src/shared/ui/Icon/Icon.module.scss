@@ -1,0 +1,23 @@
+@import "src/app/styles/variables";
+
+.icon {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  align-items: center;
+  justify-items: center;
+  fill: $default-icon-color;
+  transition: fill ease .3s;
+
+  &:hover {
+    transition: fill ease .3s;
+    fill: $light-primary-color;
+  }
+
+  &:active {
+    fill: $contrast-primary-color;
+  }
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}

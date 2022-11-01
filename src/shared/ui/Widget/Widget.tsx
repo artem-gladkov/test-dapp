@@ -3,11 +3,11 @@ import classNames from 'classnames'
 
 import styles from './Widget.module.scss'
 
-export interface WidgetProps extends HTMLProps<any>{}
+export interface IWidgetProps extends HTMLProps<any>{}
 
-export const Widget: FC<WidgetProps> = ({className, children, ...otherProps}) => {
+export const Widget: FC<IWidgetProps> = ({className, children, ...otherProps}) => {
     return (
-        <div className={classNames(styles.Widget, className)} {...otherProps}>
+        <div className={classNames(styles.widget, className)} {...otherProps}>
             {children}
         </div>
     )

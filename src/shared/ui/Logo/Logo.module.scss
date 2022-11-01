@@ -1,0 +1,13 @@
+@import "src/app/styles/variables";
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+
+  @media screen and (max-width: $sm-width){
+    width: 98px;
+    height: 16px;
+  }
+}

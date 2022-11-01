@@ -1,0 +1,62 @@
+@import "src/app/styles";
+
+.toggle {
+  border-radius: $default-border-radius;
+  background-color: $light-bg-color;
+  min-width: 100px;
+  height: 44px;
+  cursor: pointer;
+  padding: $small-indent;
+  z-index: 1;
+
+  &.full {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  grid-gap: $default-indent;
+  height: 100%;
+}
+
+.input {
+  position: absolute;
+  background-color: rgba(red, .1);
+  width: 0;
+  height: 0;
+
+  &:checked + .activeBg {
+    transition: transform ease .3s;
+    transform: translateX(100%);
+  }
+}
+
+.activeBg {
+  position: absolute;
+  border-radius: $default-border-radius;
+  background-color: $primary-color;
+  width: 50%;
+  transition: transform ease .3s;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+  z-index: -1;
+}
+
+.children {
+  transition: color ease .3s;
+
+  &.active {
+    transition: color ease .3s;
+    color: $white-color;
+  }
+}
+
+
+

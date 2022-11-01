@@ -1,0 +1,18 @@
+@import "src/app/styles";
+
+.body {
+  display: grid;
+  grid-template: max-content 1fr / 1fr;
+  min-height: 330px;
+}
+
+.emptyText {
+  font-family: $primary-font-stack;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  color: $secondary-text-color;
+  align-self: center;
+  justify-self: center;
+  margin: 0 0 40px;
+}
