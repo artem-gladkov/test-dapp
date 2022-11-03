@@ -7,6 +7,7 @@
   justify-items: center;
   fill: $default-icon-color;
   transition: fill ease .3s;
+  cursor: pointer;
 
   &:hover {
     transition: fill ease .3s;

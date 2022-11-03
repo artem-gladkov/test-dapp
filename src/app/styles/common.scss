@@ -18,10 +18,23 @@ body,
 
 body{
   font-family: $primary-font-stack;
+
+  &.overflow {
+    overflow-y: hidden;
+    width: calc(100% - 17px);
+  }
 }
 
 h1 {
   @extend %h1
+}
+
+h2 {
+  @extend %h2
+}
+
+p {
+  @extend %p
 }
 
 

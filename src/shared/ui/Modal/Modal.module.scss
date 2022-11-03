@@ -1,0 +1,48 @@
+@import "src/app/styles";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  grid-template: 1fr / 1fr;
+  align-items: center;
+  justify-items: center;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity ease .3s, visibility ease .3s;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity ease .3s, visibility ease .3s;
+  }
+
+  &.mask {
+    background-color: rgba(#092326, .3);
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $large-indent;
+  background-color: $white-color;
+  padding: 40px;
+  border-radius: $big-border-radius;
+  max-width: 480px;
+}
+
+.header {
+  display: grid;
+  grid-template: 1fr / 1fr 24px;
+  align-items: center;
+}
+
+.cross {
+  grid-column: 2 / 2;
+  justify-self: center;
+}

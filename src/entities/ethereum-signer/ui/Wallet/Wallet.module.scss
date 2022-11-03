@@ -1,0 +1,16 @@
+@import "src/app/styles";
+
+.wallet {
+  display: grid;
+  grid-template: 1fr / 24px 1fr 16px;
+  grid-gap: $default-indent;
+  align-items: center;
+  background-color: $white-color;
+  padding: 10px 12px;
+  border-radius: 20px;
+}
+
+.address {
+  color: $primary-color;
+  font-size: 14px;
+}
