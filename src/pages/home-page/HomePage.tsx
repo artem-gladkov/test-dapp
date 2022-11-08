@@ -19,7 +19,7 @@ export const HomePage: FC<IHomePageProps> = () => {
             <UserOrders/>
           </main>
           <aside>
-            <OrderBook/>
+            <OrderBook />
           </aside>
         </div>
       </Container>

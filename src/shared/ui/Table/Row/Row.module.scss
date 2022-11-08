@@ -1,0 +1,17 @@
+@import "src/app/styles";
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-rows: 1fr;
+  padding: $default-indent 0;
+  border-radius: $default-indent;
+
+  &:nth-child(2n) {
+    background-color: $light-bg-color
+  }
+
+  &.clickable {
+
+  }
+}

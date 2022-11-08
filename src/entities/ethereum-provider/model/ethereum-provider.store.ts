@@ -1,16 +1,12 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {Web3Provider} from "@ethersproject/providers";
+import {createSelector, createSlice} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
-import {AppDispatch, RootState} from "../../../app/model";
+import {RootState, useAppSelector} from "../../../app/model";
+import {EthereumProviderState} from "../types";
 import {AVAILABLE_NETWORK} from "../../../shared/config/ethereum-network";
 
-//Types
-interface EthereumProviderState {
-  provider: Web3Provider | undefined
-}
-
 const initialState: EthereumProviderState = {
-  provider: undefined
+  provider: undefined,
+  networkId: 0
 }
 
 //Slice
@@ -20,29 +16,24 @@ const ethereumProviderStore = createSlice({
   reducers: {
     updateProvider: (state, {payload}) => {
       state.provider = payload
+    },
+    setNetworkId: (state, {payload}) => {
+      state.networkId = payload
     }
   },
 })
-
-//Thunks
-export const checkEthereumConnectionThunk = async (dispatch: AppDispatch): Promise<void> => {
-  try {
-    if(window.ethereum) {
-      const provider = new Web3Provider(window.ethereum, AVAILABLE_NETWORK)
-      dispatch(updateProvider(provider))
-    }
-  } catch (e) {
-    console.log(e)
-  }
-}
 
 //Selectors
 export const useEthereumProviderStore = () => {
   return useSelector<RootState, EthereumProviderState>(rootState => rootState.ethereumProvider)
 }
 
+export const useIsCorrectNetwork = () => {
+  return useSelector<RootState, boolean>(rootState => rootState.ethereumProvider.networkId === AVAILABLE_NETWORK)
+}
+
 //Actions
-export const {updateProvider} = ethereumProviderStore.actions
+export const {updateProvider, setNetworkId} = ethereumProviderStore.actions
 
 //Reducer
 export const ethereumProviderReducer = ethereumProviderStore.reducer

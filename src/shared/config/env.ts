@@ -1,4 +1,4 @@
-const getEnvVariable = (key: string) => {
+export const getEnvVariable = (key: string) => {
   if (process.env[key] === undefined) {
     throw new Error(`Env variable ${key} is required`);
   }
@@ -12,4 +12,8 @@ export const isProd = () => {
 
 export const isDev = () => {
   return getEnvVariable('NODE_ENV') === 'development'
+}
+
+export const getBaseBackendUrl = (): string => {
+  return `https://${getEnvVariable('REACT_APP_BACKEND_URL')}`
 }

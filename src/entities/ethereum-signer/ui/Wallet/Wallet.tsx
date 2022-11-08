@@ -14,7 +14,7 @@ export const Wallet: FC<IWalletProps> = ({className, address, ...otherProps}) =>
       <Icon iconType='metamask'/>
       <div className={styles.address}>{address}</div>
       <button className={styles.buttonUnlink}>
-        <Icon iconType="unlink"/>
+        <Icon iconType="unlink" isInteractive/>
       </button>
     </div>
   )

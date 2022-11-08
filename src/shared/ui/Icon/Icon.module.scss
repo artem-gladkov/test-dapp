@@ -7,18 +7,27 @@
   justify-items: center;
   fill: $default-icon-color;
   transition: fill ease .3s;
-  cursor: pointer;
 
-  &:hover {
-    transition: fill ease .3s;
-    fill: $light-primary-color;
+  &.interactive {
+    cursor: pointer;
+
+    &:hover {
+      transition: fill ease .3s;
+      fill: $light-primary-color;
+    }
+
+    &:active {
+      fill: $contrast-primary-color;
+    }
+
+    &:focus {
+      border: 1px solid $accent-color;
+    }
+
   }
 
-  &:active {
-    fill: $contrast-primary-color;
-  }
-
-  &:focus {
-    border: 1px solid $accent-color;
+  & > svg {
+    width: 100%;
+    height: 100%;
   }
 }

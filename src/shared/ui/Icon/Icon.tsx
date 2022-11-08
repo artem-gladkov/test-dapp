@@ -9,13 +9,21 @@ export type IconType = keyof typeof IconsArray;
 
 export interface IIconProps extends IBaseComponentProps {
   iconType: IconType
+  size?: number
+  isInteractive?: boolean
 }
 
-export const Icon: FC<IIconProps> = ({className, iconType, ...otherProps}) => {
+export const Icon: FC<IIconProps> = ({className, size = 20, iconType, isInteractive, ...otherProps}) => {
   const IconRender = IconsArray[iconType]
 
+  const classes = classNames(
+    styles.icon,
+    {[styles.interactive]: isInteractive},
+    className
+  )
+
   return (
-    <div className={classNames(styles.icon, className)} {...otherProps}>
+    <div className={classes} style={{width: size, height: size}} {...otherProps}>
       <IconRender/>
     </div>
   )

@@ -1,0 +1,21 @@
+@import "src/app/styles";
+
+.order {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  border-radius: $default-border-radius;
+  overflow: hidden;
+}
+
+.size {
+  background-color: $light-primary-color;
+  border-radius: $default-border-radius;
+  overflow: hidden;
+  padding: $big-indent;
+}
+
+.price {
+  justify-self: end;
+  padding: $big-indent;
+}

@@ -18,7 +18,7 @@ export const SocialLink: FC<ISocialLinkProps> = ({
    }) => {
   return (
     <a key={href} href={href} target={target} className={classNames(styles.socialLink, className)} {...otherProps}>
-      <Icon iconType={iconType}/>
+      <Icon iconType={iconType} isInteractive/>
     </a>
   )
 }

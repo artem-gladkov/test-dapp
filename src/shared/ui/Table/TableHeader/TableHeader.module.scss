@@ -1,0 +1,10 @@
+@import "src/app/styles";
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-auto-rows: 1fr;
+  background-color: $white-color;
+  border-radius: $default-border-radius;
+  padding: $default-indent 0;
+}

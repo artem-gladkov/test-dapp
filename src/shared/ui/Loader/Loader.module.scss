@@ -24,12 +24,3 @@
   fill: $primary-color;
   animation: animate-spin infinite linear 1s;
 }
-
-@keyframes animate-spin {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}

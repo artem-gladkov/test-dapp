@@ -1,0 +1,14 @@
+@import "src/app/styles";
+
+.matches {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $large-indent;
+}
+
+.emptyText {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 20px;
+}

@@ -1,19 +1,117 @@
 @import "src/app/styles/variables";
 
-.input {
+.wrapper {
+  position: relative;
   background-color: $light-bg-color;
   border: 1px solid $border-color;
   border-radius: $default-border-radius;
   padding: 13px $big-indent;
-  font-size: 14px;
-  line-height: 18px;
-
-  &::placeholder {
-    color: $secondary-text-color;
-  }
+  cursor: text;
+  transition: border ease .3s, background-color ease .3s;
 
   &.readOnly {
     font-family: $thirdly-font-stack;
     border: 1px solid transparent;
+    cursor: default;
+
+    &.success {
+      background-color: $light-success-color;
+    }
   }
+
+  &.error {
+    border-color: $error-color;
+    background-color: $light-error-color;
+    color: $secondary-text-color;
+  }
+
+  &.success {
+    border-color: $success-color;
+  }
+
+  &.disabled {
+    color: $disabled-text-color;
+    background-color: $disabled-bg-color;
+    border: 1px solid #949697;
+    cursor: default;
+  }
+
+  &.focus,
+  &.filled {
+    & .input {
+      transform: translateY(10px);
+      transition: transform ease .3s;
+    }
+
+    & .label{
+      font-size: 12px;
+      line-height: 16px;
+      transform: translateY(-100%);
+      transition: transform ease .3s, font-size ease .3s, line-height ease .3s;
+      color: $secondary-text-color;
+    }
+  }
+}
+
+.label {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: $big-indent;
+  font-size: 14px;
+  line-height: 18px;
+  transition: transform ease .3s, font-size ease .3s, line-height ease .3s;
+  overflow: hidden;
+}
+
+.input {
+  font-size: 14px;
+  line-height: 18px;
+  width: 100%;
+  transition: transform ease .3s;
+
+  &.success {
+    border: 1px solid $success-color;
+  }
+
+  &::placeholder {
+    color: $secondary-text-color;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  border-radius: $default-border-radius;
+  background-color: $white-color;
+  width: 100%;
+  max-height: 300px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity ease .3s, visibility ease .3s;
+  padding: 10px $big-indent;
+  display: flex;
+  top: calc(100% + #{$default-indent / 2});
+  left: 0;
+  z-index: 1;
+  flex-wrap: wrap;
+  gap: $default-indent;
+  box-shadow: 0 0 10px rgba(132, 132, 132, 0.15);
+  cursor: default;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity ease .3s, visibility ease .3s;
+  }
+}
+
+.dropdownItem {
+  border-radius: $default-border-radius;
+  color: $white-color;
+  padding: $default-indent $large-indent;
+  background-color: $primary-color;
+  font-size: 14px;
+  cursor: pointer;
 }

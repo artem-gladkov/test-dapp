@@ -1,0 +1,24 @@
+@import "src/app/styles";
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.listHeader {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  padding: 0 $big-indent;
+  align-items: center;
+}
+
+.secondColumn {
+  justify-self: end;
+}
+
+.orders {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $default-indent;
+}

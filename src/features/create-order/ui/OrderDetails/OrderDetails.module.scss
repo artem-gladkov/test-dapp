@@ -1,0 +1,19 @@
+@import "src/app/styles";
+
+.orderDetails {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $default-indent;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+  border-bottom: 1px solid $border-color;
+  font-weight: 600;
+}
+
+.secondaryText {
+  color: $light-text-color;
+}

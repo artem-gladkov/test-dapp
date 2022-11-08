@@ -1,0 +1,7 @@
+@import "src/app/styles";
+
+.cell {
+  overflow: hidden;
+  padding: 0 $default-indent;
+  text-overflow: ellipsis;
+  }

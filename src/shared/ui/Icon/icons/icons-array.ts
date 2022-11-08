@@ -5,5 +5,6 @@ import {ReactComponent as youtube} from './youtube.svg'
 import {ReactComponent as unlink} from './unlink.svg'
 import {ReactComponent as cross} from './cross.svg'
 import {ReactComponent as metamask} from './metamask.svg'
+import {ReactComponent as spin} from './spin.svg'
 
-export {inst, facebook, twitter, youtube, unlink, cross, metamask}
+export {inst, facebook, twitter, youtube, unlink, cross, metamask, spin}
